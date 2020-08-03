@@ -1,0 +1,8 @@
+.table-image{
+    width: 50px;
+    border: 1px solid beige;
+    border-radius: 100%;
+}
+.table-row{
+    text-align: center;
+}

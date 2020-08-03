@@ -1,0 +1,23 @@
+.user{
+background-color: aliceblue;
+text-align: center;
+}
+.user-div{
+    margin: auto;
+    padding: 10px;
+    display: inline-block;
+    align-content: center;
+}
+.user-avatar{
+    border: 1px solid white;
+    border-radius: 100%;
+    display: inline-block;
+    align-content: center;
+    padding: 1%;
+    margin: 1%;
+}
+.user-details{
+    display: inline-block;
+    padding: 1%;
+    margin: 1%;
+}
