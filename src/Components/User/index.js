@@ -6,8 +6,7 @@ const User = (props) => {
 
     return (
 
-        <tr className="table-row">
-            <td>{props.userId}</td>
+        <tr key ={props.userId}className="table-row">
             <td ><Link to={`/users/${props.userId}`}><img className="table-image" src={props.avatar} alt={props.avatar}/></Link></td>
             <td>{props.userName}</td>
             <td>{props.userEmail}</td>

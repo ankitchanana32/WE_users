@@ -17,11 +17,11 @@ const AllUsers = (props) => {
 
     if (total_pages < 5) {
         for (let i = 1; i <= total_pages; i++) {
-            items.push(<li className="page-item"><a className="page-link" onClick={() => { props.getUsersListByPage(i) }} href="#">{i}</a></li>)
+            items.push(<li key={i} className="page-item"><a className="page-link" onClick={() => { props.getUsersListByPage(i) }} href="#">{i}</a></li>)
         }
     } else {
         for (let i = 1; i <= 5; i++) {
-            items.push(<li className="page-item"><a className="page-link" onClick={() => { props.getUsersListByPage(i) }} ftab>{i}</a></li>)
+            items.push(<li key={i} className="page-item"><a className="page-link" onClick={() => { props.getUsersListByPage(i) }} >{i}</a></li>)
         }
 
     }
@@ -33,11 +33,11 @@ const AllUsers = (props) => {
                 <nav aria-label="...">
                     <ul className="pagination">
                         <li className={`page-item ${current_page <= 1 ? "disabled" : ""}`}>
-                            <a className="page-link" onClick={() => { props.getUsersListByPage(current_page <= 1 ? 1 : current_page - 1) }} href="javascript:void(0)">Previous</a>
+                            <a className="page-link" onClick={() => { props.getUsersListByPage(current_page <= 1 ? 1 : current_page - 1) }} href="#!">Previous</a>
                         </li>
                         {items}
                         <li className={`page-item ${current_page >= total_pages ? "disabled" : ""}`}>
-                            <a className="page-link" onClick={() => { props.getUsersListByPage(current_page >= total_pages ? total_pages : current_page + 1) }} href="javascript:void(0)">Next</a>
+                            <a className="page-link" onClick={() => { props.getUsersListByPage(current_page >= total_pages ? total_pages : current_page + 1) }} href="#!">Next</a>
                         </li>
                     </ul>
                 </nav>
